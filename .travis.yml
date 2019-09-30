@@ -3,3 +3,10 @@ jdk: openjdk13
 install: true
 os: linux
 
+deploy:
+    - provider: s3
+      access_key_id: $AWS_ACCESS
+      secret_access_key: $AWS_KEY
+      bucket: 'mytravis-testing'
+      skip_cleanup: true
+      
